@@ -7,4 +7,5 @@ Project 1: Brain Games.
 Brain Even
 <a href="https://asciinema.org/a/2fd1j30Z1wwqac7gsDeHxqNPG" target="_blank"><img src="https://asciinema.org/a/2fd1j30Z1wwqac7gsDeHxqNPG.svg" /></a>
 
-
+Brain Calc
+<a href="https://asciinema.org/a/F9KbuQ9GaFcY4VDaBYjiGLZlp" target="_blank"><img src="https://asciinema.org/a/F9KbuQ9GaFcY4VDaBYjiGLZlp.svg" /></a>
