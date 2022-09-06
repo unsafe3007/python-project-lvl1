@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 from brain_games1.cli import welcome_user
-from brain_games1.games.even import is_even
+from brain_games1.games.calc import get_answer
 
 
 def main():
-
     print('Welcome to the Brain Games!!!')
-
     name = welcome_user()
-    is_even(name)
+    get_answer(name)
 
 
 if __name__ == '__main__':
