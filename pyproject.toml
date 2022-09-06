@@ -4,11 +4,12 @@ version = "0.1.0"
 description = ""
 authors = ["Pavel Smushko <unsafe3007@gmail.com>"]
 readme = "README.md"
-packages = [{include = "brain_games"}]
+packages = [{include = "brain_games1"}]
 #packages = [{include = "python_project_lvl1"}]
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
+brain-games = "brain_games1.scripts.brain_games:main"
+brain-even = "brain_games1.scripts.brain_even:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"

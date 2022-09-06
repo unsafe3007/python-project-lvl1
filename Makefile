@@ -13,5 +13,8 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-make lint:
-	    poetry run flake8 brain_games
+lint:
+	poetry run flake8 brain_games1
+
+brain-even:
+	poetry run brain-even
