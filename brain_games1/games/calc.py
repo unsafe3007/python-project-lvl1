@@ -17,7 +17,7 @@ def get_answer(name):
             count += 1
         else:
             print(f'{answer} is wrong answer ;(. '
-                  f'Correct answer was {num_1 + num_2}. Let\'s try again {name}')
+                  f"Correct answer was {num_1 + num_2}. Let's try again {name}")
             break
 
         print('Question:', num_1, '-', num_2)
@@ -27,7 +27,7 @@ def get_answer(name):
             count += 1
         else:
             print(f'{answer} is wrong answer ;(. '
-                  f'Correct answer was {num_1 - num_2}. Let\'s try again {name}')
+                  f"Correct answer was {num_1 - num_2}. Let's try again {name}")
             break
 
         print('Question:', num_1, '*', num_2)
@@ -37,7 +37,7 @@ def get_answer(name):
             count += 1
         else:
             print(f'{answer} is wrong answer ;(. '
-                  f'Correct answer was {num_1 * num_2}. Let\'s try again {name}')
+                  f"Correct answer was {num_1 * num_2}. Let's try again {name}")
             break
 
     if count == 3:
