@@ -41,4 +41,4 @@ def get_answer(name):
             break
 
     if count == 3:
-        print('Congratulations ' + name + '!!!')
+        print('Congratulations, ' + name + '!')
