@@ -29,7 +29,7 @@ def get_answer(name):
             count += 1
         elif answer == 'yes' and is_prime is False:
             print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was 'no'. Let's try again {name}!")
+                  f"Correct answer was 'no'. Let's try again, {name}!")
             break
 
         if answer == 'no' and is_prime is False:
@@ -37,7 +37,7 @@ def get_answer(name):
             count += 1
         elif answer == 'no' and is_prime is True:
             print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was 'yes'. Let's try again {name}!")
+                  f"Correct answer was 'yes'. Let's try again, {name}!")
             break
 
     if count == 3:

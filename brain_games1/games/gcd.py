@@ -34,7 +34,7 @@ def get_answer(name):
             count += 1
         else:
             print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was {gcd}. Let's try again {name}! ")
+                  f"Correct answer was {gcd}. Let's try again, {name}!")
             break
 
     if count == 3:

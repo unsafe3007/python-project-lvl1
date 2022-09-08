@@ -30,4 +30,4 @@ def get_progression(name):
                   f'Let\'s try again, {name}!')
             break
     if total == 3:
-        print(f'Congratulations, {name} !')
+        print(f'Congratulations, {name}!')
