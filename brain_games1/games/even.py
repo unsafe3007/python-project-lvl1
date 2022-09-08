@@ -7,7 +7,7 @@ def is_even(name):
     count = 0
     while count < 3:
         num = randint(1, 100)
-        print('Question: ', num)
+        print('Question:', num)
         answer = input('Your answer: ')
 
         if answer == 'yes' and num % 2 == 0:
