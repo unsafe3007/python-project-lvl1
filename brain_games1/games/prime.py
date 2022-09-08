@@ -21,7 +21,7 @@ def get_answer(name):
         num = randint(2, 100)
         is_prime = get_prime(num)
 
-        print('Question: ', num)
+        print('Question:', num)
         answer = input('Your answer: ')
         if answer == 'yes' and is_prime is True:
 
