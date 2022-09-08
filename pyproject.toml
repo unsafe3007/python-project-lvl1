@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "First study project"
 authors = ["Pavel Smushko <unsafe3007@gmail.com>"]
 readme = "README.md"
 packages = [{include = "brain_games1"}]
@@ -21,7 +21,7 @@ python = "^3.8"
 prompt = "^0.4.1"
 
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.dev-dependencies]
 flake8 = "^5.0.4"
 
 [build-system]
