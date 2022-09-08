@@ -5,6 +5,7 @@ description = ""
 authors = ["Pavel Smushko <unsafe3007@gmail.com>"]
 readme = "README.md"
 packages = [{include = "brain_games1"}]
+repository = "https://github.com/unsafe3007/python-project-lvl1"
 #packages = [{include = "python_project_lvl1"}]
 
 [tool.poetry.scripts]
