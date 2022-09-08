@@ -31,4 +31,3 @@ def get_progression(name):
             break
     if total == 3:
         print(f'Congratulations, {name} !')
-
