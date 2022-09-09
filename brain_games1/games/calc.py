@@ -1,4 +1,23 @@
 from random import randint
+import operator
+
+
+def math_function(num_1, num_2, name, math_op, function):
+    print('Question:', num_1, math_op, num_2)
+
+    answer = int(input('Your answer: '))
+
+    if answer == function(num_1, num_2):
+        print('Correct!')
+
+        return True
+
+    else:
+        print(f'{answer} is wrong answer ;(. '
+              f"Correct answer was {function(num_1, num_2)}. "
+              f"Let's try again, {name}!")
+
+        return False
 
 
 def get_answer(name):
@@ -10,37 +29,19 @@ def get_answer(name):
     count = 0
 
     while count < 3:
-        print('Question:', num_1, '+', num_2)
-        answer = int(input('Your answer: '))
-        if answer == num_1 + num_2:
-            print('Correct!')
+        if math_function(num_1, num_2, name, '+', operator.add):
             count += 1
         else:
-            print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was {num_1 + num_2}. "
-                  f"Let's try again, {name}!")
             break
 
-        print('Question:', num_1, '-', num_2)
-        answer = int(input('Your answer: '))
-        if answer == num_1 - num_2:
-            print('Correct!')
+        if math_function(num_1, num_2, name, '-', operator.sub):
             count += 1
         else:
-            print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was {num_1 - num_2}. "
-                  f"Let's try again, {name}!")
             break
 
-        print('Question:', num_1, '*', num_2)
-        answer = int(input('Your answer: '))
-        if answer == num_1 * num_2:
-            print('Correct!')
+        if math_function(num_1, num_2, name, '*', operator.mul):
             count += 1
         else:
-            print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was {num_1 * num_2}. "
-                  f"Let's try again, {name}!")
             break
 
     if count == 3:
