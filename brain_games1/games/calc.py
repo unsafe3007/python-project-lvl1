@@ -2,7 +2,14 @@ from random import randint
 import operator
 
 
-def math_function(num_1, num_2, name, math_op, function):
+def math_function(num_1, num_2, name, math_op):
+    if math_op == '+':
+        function = operator.add
+    elif math_op == '-':
+        function = operator.sub
+    elif math_op == '*':
+        function = operator.mul
+
     print('Question:', num_1, math_op, num_2)
 
     answer = int(input('Your answer: '))
@@ -29,17 +36,17 @@ def get_answer(name):
     count = 0
 
     while count < 3:
-        if math_function(num_1, num_2, name, '+', operator.add):
+        if math_function(num_1, num_2, name, '+'):
             count += 1
         else:
             break
 
-        if math_function(num_1, num_2, name, '-', operator.sub):
+        if math_function(num_1, num_2, name, '-'):
             count += 1
         else:
             break
 
-        if math_function(num_1, num_2, name, '*', operator.mul):
+        if math_function(num_1, num_2, name, '*'):
             count += 1
         else:
             break
