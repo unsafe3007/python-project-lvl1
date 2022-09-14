@@ -4,11 +4,7 @@ from brain_games1.games.even import is_even
 
 
 def main():
-
-    print('Welcome to the Brain Games!!!')
-
-    name = welcome_user()
-    is_even(name)
+    welcome_user(is_even)
 
 
 if __name__ == '__main__':

@@ -4,11 +4,7 @@ from brain_games1.games.gcd import get_answer
 
 
 def main():
-
-    print('Welcome to the Brain Games!!!')
-
-    name = welcome_user()
-    get_answer(name)
+    welcome_user(get_answer)
 
 
 if __name__ == '__main__':

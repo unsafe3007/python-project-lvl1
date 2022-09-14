@@ -4,11 +4,7 @@ from brain_games1.games.progression import get_progression
 
 
 def main():
-
-    print('Welcome to the Brain Games!!!')
-
-    name = welcome_user()
-    get_progression(name)
+    welcome_user(get_progression)
 
 
 if __name__ == '__main__':
