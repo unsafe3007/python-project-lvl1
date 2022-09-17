@@ -21,7 +21,7 @@ def get_answer():
     num_2 = random.randint(1, 100)
     op = random.choice(list(OPERATORS))
 
-    question = f'{num_1} {op} {num_2} = '
+    question = f'Question: {num_1} {op} {num_2}'
 
     correct_answer = math_function(num_1, num_2, op)
 
