@@ -1,55 +1,28 @@
-from random import randint
+import random
 import operator
 
+CONDITION = 'What is the result of the expression?'
 
-def math_function(num_1, num_2, name, math_op):
-    if math_op == '+':
-        function = operator.add
-    elif math_op == '-':
-        function = operator.sub
-    elif math_op == '*':
-        function = operator.mul
-
-    print('Question:', num_1, math_op, num_2)
-
-    answer = int(input('Your answer: '))
-
-    if answer == function(num_1, num_2):
-        print('Correct!')
-
-        return True
-
-    else:
-        print(f'{answer} is wrong answer ;(. '
-              f"Correct answer was {function(num_1, num_2)}. "
-              f"Let's try again, {name}!")
-
-        return False
+OPERATORS = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul,
+}
 
 
-def get_answer(name):
-    print('What is the result of the expression?')
+def math_function(num_1, num_2, op):
+    operation = OPERATORS.get(op)
+    return operation(num_1, num_2)
 
-    num_1 = randint(1, 100)
-    num_2 = randint(1, 100)
 
-    count = 0
+def get_answer():
 
-    while count < 3:
-        if math_function(num_1, num_2, name, '+'):
-            count += 1
-        else:
-            break
+    num_1 = random.randint(1, 100)
+    num_2 = random.randint(1, 100)
+    op = random.choice(list(OPERATORS))
 
-        if math_function(num_1, num_2, name, '-'):
-            count += 1
-        else:
-            break
+    question = f'{num_1} {op} {num_2} = '
 
-        if math_function(num_1, num_2, name, '*'):
-            count += 1
-        else:
-            break
+    correct_answer = math_function(num_1, num_2, op)
 
-    if count == 3:
-        print('Congratulations, ' + name + '!')
+    return question, str(correct_answer)

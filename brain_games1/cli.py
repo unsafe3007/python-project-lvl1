@@ -9,9 +9,33 @@ def welcome_user():
     return name
 
 
-def start_game(function):
+def start_game(game):
     print('Welcome to the Brain Games!!!')
 
     name = welcome_user()
 
-    function(name)
+    print(game.CONDITION)
+
+    count = 0
+
+    while count < 3:
+        question, correct_answer = game.get_answer()
+
+        print(question)
+
+        answer = input('Your answer: ')
+
+        if answer == correct_answer:
+            print('Correct!')
+
+            count += 1
+
+        else:
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'."
+                  f" Let's try again, " + name + "!")
+
+            break
+
+    if count == 3:
+        print(f'Congratulations, {name}!!!')

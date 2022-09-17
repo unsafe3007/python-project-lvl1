@@ -1,5 +1,7 @@
 from random import randint
 
+CONDITION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def get_prime(num):
     divisor_count = 0
@@ -14,29 +16,9 @@ def get_prime(num):
         return 'no'
 
 
-def get_answer(name):
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+def get_answer():
+    num = randint(2, 100)
+    question = f'Question: {num}'
+    correct_answer = get_prime(num)
 
-    count = 0
-
-    while count < 3:
-
-        num = randint(2, 100)
-        correct_answer = get_prime(num)
-
-        print('Question:', num)
-        answer = input('Your answer: ')
-
-        if answer == correct_answer:
-            print('Correct!')
-
-            count += 1
-        else:
-            print(f'{answer} is wrong answer ;(. '
-                  f"Correct answer was '{correct_answer}'."
-                  f" Let's try again, {name}!")
-
-            break
-
-    if count == 3:
-        print(f'Congratulations, {name}!')
+    return question, correct_answer

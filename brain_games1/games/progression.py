@@ -1,5 +1,7 @@
 from random import randint, choice
 
+CONDITION = 'What number is missing in the progression?'
+
 
 def generate_progression():
     numbers = []
@@ -21,20 +23,8 @@ def generate_progression():
     return correct_answer, progression
 
 
-def get_progression(name):
-    print('What number is missing in the progression?')
-    total = 0
-    while total < 3:
-        correct_answer, progression = generate_progression()
+def get_answer():
+    correct_answer, progression = generate_progression()
+    question = f'Question: {progression}'
 
-        print("Question:", progression)
-        answer = int(input('Your answer: '))
-        if answer == correct_answer:
-            total += 1
-        else:
-            print(f'{answer} is wrong answer ;(. '
-                  f'Correct answer was {correct_answer}. '
-                  f'Let\'s try again, {name}!')
-            break
-    if total == 3:
-        print(f'Congratulations, {name}!')
+    return question, str(correct_answer)
